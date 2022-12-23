@@ -1,0 +1,9 @@
+deploy:
+  site_container: 3K545V3XUXbTGLV4oU5aNQ1oEgCDS73juuGzmxr5F1N1
+  config_container: 3K545V3XUXbTGLV4oU5aNQ1oEgCDS73juuGzmxr5F1N1
+  new_container:
+    nicename: doc
+    placement_policy: "REP 3"
+    basic_acl: 0x1fbf8cff
+source:
+  local: public

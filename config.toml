@@ -1,0 +1,62 @@
+################################# Site configuration ###################
+baseURL = 'https://truecloudlab.github.io/'
+# disable language
+disableLanguages = []
+
+title = 'FrostFS Docs site'
+theme = 'dot-hugo'
+
+# unsafe html
+[markup.goldmark.renderer]
+unsafe = true
+
+############################# Default Parameters ##########################
+[params]
+# logo is for all page
+logo = 'images/FrostFS.svg'
+
+# customize color
+primary_color = "#00c3e5"
+bg_color = "#00c3e5"
+body_color = "#f9f9f9"
+text_color = "#003"
+text_color_dark = "#003"
+white_color = "#ffffff"
+light_color = "#00c3e5"
+
+# font family
+font_family = "WorkSans" # Choose font family from : https://fonts.google.com/
+
+# contact form action
+contact_form_action = "#" # contact form works with : https://formspree.io
+
+############################## social links ##############################
+[[params.social]]
+icon = "ti-github" # themify icon pack : https://themify.me/themify-icons
+name = "Github"
+link = "https://github.com/TrueCloudLab"
+
+################################ English Language ######################
+[Languages.en]
+languageName = "En"
+languageCode = "en-us"
+weight = 1
+copyright = "Copyright &copy; [TrueCloudLab](https://github.com/TrueCloudLab) 2022"
+
+# banner
+[Languages.en.params.banner]
+title = "FrostFS Documentation site"
+subtitle = "Articles and answers from developers and user community"
+#bg_image = "images/header.svg"
+placeholder = "Have a question? Just ask here or enter terms"
+
+################## english navigation #################
+[[Languages.en.menu.main]]
+name = "Proposals"
+url = "proposals/"
+weight = 1
+
+[[Languages.en.menu.main]]
+name = "SDK & API"
+url = "api/"
+weight = 2

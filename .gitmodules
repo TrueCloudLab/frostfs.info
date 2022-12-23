@@ -1,0 +1,4 @@
+[submodule "themes/dot-hugo"]
+	path = themes/dot-hugo
+	url = https://github.com/TrueCloudLab/dot-hugo
+	branch = frostfs_design_version
