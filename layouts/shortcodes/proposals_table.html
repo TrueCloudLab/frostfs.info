@@ -1,0 +1,44 @@
+<h5 id="index-by-category" style="margin-bottom: 10px;">{{ .Get 1 }}</h5>
+{{ $active_category := .Get 0 }}
+{{ $active_status := .Get 1 }}
+
+{{ $is_exists := 0 }}
+{{ range $page := .Site.RegularPages }}
+  {{ if gt (len (findRE $active_status $page.Params.status)) 0 }}
+    {{ if gt (len (findRE (print "/" $active_category "/") $page.File)) 0 }}
+      {{ $is_exists = 1 }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ if eq $is_exists 1 }}
+<table>
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>PEP</th>
+      <th>Authors</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{ range $page := .Site.RegularPages }}
+      {{ if gt (len (findRE $active_status $page.Params.status)) 0 }}
+        {{ if gt (len (findRE (print "/" $active_category "/") $page.File)) 0 }}
+          <tr>
+            <th>{{ $page.Params.status }}</th>
+            <th>
+              <a href="{{ $page.Permalink }}">{{ $page.Title }}</a>
+            </th>
+            <th>{{ $page.Params.author }}</th>
+            <!-- <th>{{ $page.Lastmod }}</th> -->
+          </tr>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  </tbody>
+</table>
+{{ else }}
+<p>Not found</p>
+{{ end }}
+
+
