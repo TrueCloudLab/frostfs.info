@@ -1,5 +1,5 @@
 ################################# Site configuration ###################
-baseURL = 'https://truecloudlab.github.io/'
+baseURL = 'https://truecloudlab.github.io/frostfs.info'
 # disable language
 disableLanguages = []
 
