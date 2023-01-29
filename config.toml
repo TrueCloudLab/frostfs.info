@@ -1,9 +1,9 @@
 ################################# Site configuration ###################
-baseURL = 'https://truecloudlab.github.io/frostfs.info'
+baseURL = 'https://frostfs.info/'
 # disable language
 disableLanguages = []
 
-title = 'FrostFS Docs site'
+title = 'FrostFS site'
 theme = 'dot-hugo'
 
 # unsafe html
