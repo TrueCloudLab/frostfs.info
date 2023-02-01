@@ -6,6 +6,8 @@ disableLanguages = []
 title = 'FrostFS site'
 theme = 'dot-hugo'
 
+enableEmoji = true
+
 # unsafe html
 [markup.goldmark.renderer]
 unsafe = true
